@@ -154,7 +154,7 @@ dataToPredic.replace("Female",0,inplace=True)
 dataToPredic.replace("Male",1,inplace=True)
 
 
-filename='logisticRegressionModel.pkl'
+filename='finalized_model.sav'
 loaded_model= pickle.load(open(filename, 'rb'))
 Result=loaded_model.predict(dataToPredic)
 ResultProb= loaded_model.predict_proba(dataToPredic)
