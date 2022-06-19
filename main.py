@@ -109,10 +109,10 @@ dataToPredic = pd.DataFrame({
  })
 
 #-------------------------Mapping-------------------------------
-dataToPredic.replace("Normal weight BMI  (18.5-25)",21.75,inplace=True)
-dataToPredic.replace("Underweight BMI (< 18.5)",17,inplace=True)
-dataToPredic.replace("Overweight BMI (25-30)",27.5,inplace=True)
-dataToPredic.replace("Obese BMI (> 30)",31,inplace=True)
+dataToPredic.replace("Underweight BMI (< 18.5)",0,inplace=True)
+dataToPredic.replace("Normal weight BMI  (18.5-25)",1,inplace=True)
+dataToPredic.replace("Overweight BMI (25-30)",2,inplace=True)
+dataToPredic.replace("Obese BMI (> 30)",3,inplace=True)
 
 dataToPredic.replace("Yes",1,inplace=True)
 dataToPredic.replace("No",0,inplace=True)
@@ -163,12 +163,14 @@ ResultProb1=round(ResultProb[0][1] * 100, 2)
 
 
 
-
-
-
 if st.button('Predict'):
  # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
- st.write('your prediction:....',Result, ResultProb1)
+ if (ResultProb1>30):
+  st.write('You are a person at risk for getting a heart disease, you have a', ResultProb1, '% chance of getting a heart disease' )
+ else:
+  st.write('You are healthy, you have a', ResultProb1, '% chance of getting a heart disease' )
+
+
  # array([[ chance of NOT having, chance of having 0.01151576]])
  # array([[0.98848424, 0.01151576]])
 
