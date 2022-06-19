@@ -62,16 +62,16 @@ Race=st.sidebar.selectbox("Select your Race", ("Asian",
 Gender=st.sidebar.selectbox("Select your gender", ("Female", 
                              "Male" ))
 
-sleepTime = st.sidebar.number_input("How many hours on average do you sleep?", 0, 24, 7)
+sleepTime = st.sidebar.number_input("Hours of sleep per 24h", 0, 24, 7)
 
-genHealth = st.sidebar.selectbox("How can you define your general health?",
+genHealth = st.sidebar.selectbox("General health",
                              options=("Good","Excellent", "Fair", "Very good", "Poor"))
 
-physHealth = st.sidebar.number_input("Your physical health in the past 30 days was"
+physHealth = st.sidebar.number_input("Physical health in the past month"
                                  , 0, 30, 0)
-mentHealth = st.sidebar.number_input("Your mental health in the past 30 days"
+mentHealth = st.sidebar.number_input("Mental health in the past month"
                                  , 0, 30, 0)
-physAct = st.sidebar.selectbox("Physical activity in the past month?"
+physAct = st.sidebar.selectbox("Physical activity in the past month"
                            , options=("No", "Yes"))
 
 Smoking = st.sidebar.selectbox("Have you smoked at least 100 cigarettes in"
@@ -165,10 +165,10 @@ ResultProb1=round(ResultProb[0][1] * 100, 2)
 
 if st.button('Predict'):
  # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
- if (ResultProb[0][1]>30):
-  st.write('You are a person at risk for getting a heart disease, you have a', ResultProb[0][1], '% chance of getting a heart disease' )
+ if (ResultProb1>30):
+  st.write('You are a person at risk for getting a heart disease, you have a', ResultProb1, '% chance of getting a heart disease' )
  else:
-  st.write('You are healthy, you have a', ResultProb[0][1], '% chance of getting a heart disease' )
+  st.write('You are healthy, you have a', ResultProb1, '% chance of getting a heart disease' )
 
 
  # array([[ chance of NOT having, chance of having 0.01151576]])
