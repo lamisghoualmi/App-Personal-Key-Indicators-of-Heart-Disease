@@ -165,10 +165,10 @@ ResultProb1=round(ResultProb[0][1] * 100, 2)
 
 if st.button('Predict'):
  # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
- if (ResultProb1>30):
-  st.write('You are a person at risk for getting a heart disease, you have a', ResultProb1, '% chance of getting a heart disease' )
+ if (ResultProb[0][1]>30):
+  st.write('You are a person at risk for getting a heart disease, you have a', ResultProb[0][1], '% chance of getting a heart disease' )
  else:
-  st.write('You are healthy, you have a', ResultProb1, '% chance of getting a heart disease' )
+  st.write('You are healthy, you have a', ResultProb[0][1], '% chance of getting a heart disease' )
 
 
  # array([[ chance of NOT having, chance of having 0.01151576]])
