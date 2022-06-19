@@ -168,7 +168,7 @@ ResultProb1=round(ResultProb[0][1] * 100, 2)
 
 if st.button('Predict'):
  # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
- st.write('your prediction:....',Result)
+ st.write('your prediction:....',Result, ResultProb1)
  # array([[ chance of NOT having, chance of having 0.01151576]])
  # array([[0.98848424, 0.01151576]])
 
