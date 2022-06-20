@@ -29,8 +29,8 @@ st.write("""
          """)
 st.write("""
          ###### To predict your heart disease status:
-         1- Enter the parameters that best describe you.
-         2- Press the "Predict" button 
+         ###### 1- Enter the parameters that best describe you.
+         ###### 2- Press the "Predict" button 
          and wait for the result.
          """)
 
