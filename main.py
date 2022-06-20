@@ -22,23 +22,20 @@ from sklearn.linear_model import LogisticRegression
 st.image("heart-care.jpg", use_column_width=True)
 
 st.write("""
-         #### You can estimate your chance of getting  heart diseasein seconds!
+         ## You can estimate your chance of getting  heart disease in seconds!
       the app is built based on the 2020 annual CDC survey data of 400k  adults related to their health status
        this app is built using machine learning algorithm called logistic regression with an accuracy of 88% .
-        Learn more about the data here: ([Key Indicators of Heart Disease](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease))
+        Learn more about the data here: ([Key Indicators of Heart Disease](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease)). 
+        this results is not equivalent to a medical diagnosis!  If you are interested to check my code, go to my github using the following link: 
+           ([Github](https://github.com/lamisghoualmi/App-Personal-Key-Indicators-of-Heart-Disease))
          """)
 st.write("""
-         ###### To predict your heart disease status:
+         ### To predict your heart disease status:
          ###### 1- Enter the parameters that best describe you.
-         ###### 2- Press the "Predict" button 
-         and wait for the result.
+         ###### 2- Press the "Predict" button and wait for the result.
          """)
 
-st.write("""
-           #### Disclaimer: 
-           this results is not equivalent to a medical diagnosis!  If you are interested to check my code, go to my github using the following link: 
-           ([Github](https://github.com/lamisghoualmi/App-Personal-Key-Indicators-of-Heart-Disease))
-           """)
+
 
 # st.write(BMIdata)
 # -------------------------------------------------------------------------
