@@ -173,7 +173,6 @@ Result=loaded_model.predict(dataToPredic)
 ResultProb= loaded_model.predict_proba(dataToPredic)
 ResultProb1=round(ResultProb[0][1] * 100, 2)
 
-
 if st.button('Predict your chance of getting a heart disease'):
  # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
  if (ResultProb1>30):
@@ -187,7 +186,7 @@ if st.button('Predict your chance of getting a heart disease'):
   
   
   
-  st.write("""
+st.write("""
            #### Disclaimer: this results is not equivalent to a medical diagnosis! 
            If you are interested to check my code, go to my github using the following link: 
            ([Github](https://github.com/lamisghoualmi/App-Personal-Key-Indicators-of-Heart-Disease))
