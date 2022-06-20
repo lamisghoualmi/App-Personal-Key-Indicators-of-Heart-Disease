@@ -35,8 +35,8 @@ st.write("""
          """)
 
 st.write("""
-           #### Disclaimer: this results is not equivalent to a medical diagnosis! 
-           If you are interested to check my code, go to my github using the following link: 
+           #### Disclaimer: 
+           this results is not equivalent to a medical diagnosis!  If you are interested to check my code, go to my github using the following link: 
            ([Github](https://github.com/lamisghoualmi/App-Personal-Key-Indicators-of-Heart-Disease))
            """)
 
