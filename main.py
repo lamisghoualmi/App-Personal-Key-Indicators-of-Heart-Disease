@@ -194,6 +194,6 @@ with col3 :
 
 
  # array([[ chance of NOT having, chance of having 0.01151576]])
- # array([[0.98848424, 0.01151576]])
+ # array([[0.98848424, 0.01151576]])kkk
 
 
