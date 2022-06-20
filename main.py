@@ -34,6 +34,7 @@ st.write("""
 # st.write(BMIdata)
 # -------------------------------------------------------------------------
 st.sidebar.image("heart-care.jpg", use_column_width=True)
+st.sidebar.title('Please, fill your information')
 BMI=st.sidebar.selectbox("Select your BMI", ("Normal weight BMI  (18.5-25)", 
                              "Underweight BMI (< 18.5)" ,
                              "Overweight BMI (25-30)",
@@ -64,25 +65,27 @@ Race=st.sidebar.selectbox("Select your Race", ("Asian",
 
 Gender=st.sidebar.selectbox("Select your gender", ("Female", 
                              "Male" ))
-
-sleepTime = st.sidebar.number_input("Hours of sleep per 24h", 0, 24, 7)
-
-genHealth = st.sidebar.selectbox("General health",
-                             options=("Good","Excellent", "Fair", "Very good", "Poor"))
-
-physHealth = st.sidebar.number_input("Physical health in the past month"
-                                 , 0, 30, 0)
-mentHealth = st.sidebar.number_input("Mental health in the past month"
-                                 , 0, 30, 0)
-physAct = st.sidebar.selectbox("Physical activity in the past month"
-                           , options=("No", "Yes"))
-
 Smoking = st.sidebar.selectbox("Have you smoked at least 100 cigarettes in"
                           " your entire life (approx. 5 packs)?)",
                           options=("No", "Yes"))
 alcoholDink = st.sidebar.selectbox("Do you have more than 14 drinks of alcohol (men)"
                                 " or more than 7 (women) in a week?", options=("No", "Yes"))
 stroke = st.sidebar.selectbox("Did you have a stroke?", options=("No", "Yes"))
+
+sleepTime = st.sidebar.number_input("Hours of sleep per 24h", 0, 24, 7) 
+
+genHealth = st.sidebar.selectbox("General health",
+                             options=("Good","Excellent", "Fair", "Very good", "Poor"))
+
+physHealth = st.sidebar.number_input("Physical health in the past month (Excelent: 0 - Very bad: 30)"
+                                 , 0, 30, 0)
+mentHealth = st.sidebar.number_input("Mental health in the past month (Excelent: 0 - Very bad: 30)"
+                                 , 0, 30, 0)
+physAct = st.sidebar.selectbox("Physical activity in the past month"
+                           , options=("No", "Yes"))
+
+
+
 diffWalk = st.sidebar.selectbox("Do you have serious difficulty walking"
                             " or climbing stairs?", options=("No", "Yes"))
 diabetic = st.sidebar.selectbox("Have you ever had diabetes?",
