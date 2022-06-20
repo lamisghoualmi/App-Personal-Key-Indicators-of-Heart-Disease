@@ -28,17 +28,21 @@ st.write("""
         Learn more about the data here: ([Key Indicators of Heart Disease](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease))
          """)
 st.write("""
-         ###### To predict your heart disease status, 
-         Enter the parameters that best describe you then Press the "Predict" button 
+         ###### To predict your heart disease status:
+         1- Enter the parameters that best describe you.
+         2- Press the "Predict" button 
          and wait for the result.
          """)
 
-
+st.write("""
+           #### Disclaimer: this results is not equivalent to a medical diagnosis! 
+           If you are interested to check my code, go to my github using the following link: 
+           ([Github](https://github.com/lamisghoualmi/App-Personal-Key-Indicators-of-Heart-Disease))
+           """)
 
 # st.write(BMIdata)
 # -------------------------------------------------------------------------
-st.sidebar.image("heart-care.jpg", use_column_width=True)
-st.sidebar.title('Please, fill your information')
+st.sidebar.title('Please, fill your informations to predict your heart condition')
 
 
 
@@ -173,7 +177,7 @@ Result=loaded_model.predict(dataToPredic)
 ResultProb= loaded_model.predict_proba(dataToPredic)
 ResultProb1=round(ResultProb[0][1] * 100, 2)
 
-if st.button('Predict your chance of getting a heart disease'):
+if st.button('PREDICT'):
  # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
  if (ResultProb1>30):
   st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
@@ -181,13 +185,9 @@ if st.button('Predict your chance of getting a heart disease'):
              caption="You areat risk for getting a heart disease! - Dr. Logistic Regression")
  else:
   st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
-  st.image("red.png",
+  st.image("green.png",
              caption="Good news, You are healthy! - Dr. Logistic Regression")
   
   
   
-st.write("""
-           #### Disclaimer: this results is not equivalent to a medical diagnosis! 
-           If you are interested to check my code, go to my github using the following link: 
-           ([Github](https://github.com/lamisghoualmi/App-Personal-Key-Indicators-of-Heart-Disease))
-           """)
+
