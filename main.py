@@ -19,14 +19,18 @@ from sklearn.linear_model import LogisticRegression
 # pip list --format=freeze
 # streamlit run "C:\Users\Benk\Desktop\PowerBi\Personal Key Indicators of Heart Disease\main.py"
 
-
-st.title('Heart Disease Prediction')
+st.image("heart-care.jpg", use_column_width=True)
 
 st.write("""
          #### You can estimate your chance of getting  heart diseasein seconds!
       the app is built based on the 2020 annual CDC survey data of 400k  adults related to their health status
        this app is built using machine learning algorithm called logistic regression with an accuracy of 88% .
         Learn more about the data here: ([Key Indicators of Heart Disease](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease))
+         """)
+st.write("""
+         ###### To predict your heart disease status, 
+         Enter the parameters that best describe you then Press the "Predict" button 
+         and wait for the result.
          """)
 
 
@@ -35,6 +39,9 @@ st.write("""
 # -------------------------------------------------------------------------
 st.sidebar.image("heart-care.jpg", use_column_width=True)
 st.sidebar.title('Please, fill your information')
+
+
+
 BMI=st.sidebar.selectbox("Select your BMI", ("Normal weight BMI  (18.5-25)", 
                              "Underweight BMI (< 18.5)" ,
                              "Overweight BMI (25-30)",
@@ -167,13 +174,21 @@ ResultProb= loaded_model.predict_proba(dataToPredic)
 ResultProb1=round(ResultProb[0][1] * 100, 2)
 
 
-    if st.button('Predict your chance of getting a heart disease'):
-     # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
-     if (ResultProb1>30):
-      st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
-      st.image("red.png",
-                     caption="You areat risk for getting a heart disease! - Dr. Logistic Regression")
-     else:
-      st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
-      st.image("red.png",
-                     caption="Good news, You are healthy! - Dr. Logistic Regression")
+if st.button('Predict your chance of getting a heart disease'):
+ # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
+ if (ResultProb1>30):
+  st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
+  st.image("red.png",
+             caption="You areat risk for getting a heart disease! - Dr. Logistic Regression")
+ else:
+  st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
+  st.image("red.png",
+             caption="Good news, You are healthy! - Dr. Logistic Regression")
+  
+  
+  
+  st.write("""
+           #### Disclaimer: this results is not equivalent to a medical diagnosis! 
+           If you are interested to check my code, go to my github using the following link: 
+           ([Github](https://github.com/lamisghoualmi/App-Personal-Key-Indicators-of-Heart-Disease))
+           """)
