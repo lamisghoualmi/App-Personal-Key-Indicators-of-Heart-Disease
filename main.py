@@ -73,11 +73,10 @@ Race=st.sidebar.selectbox("Select your Race", ("Asian",
 
 Gender=st.sidebar.selectbox("Select your gender", ("Female", 
                              "Male" ))
-Smoking = st.sidebar.selectbox("Have you smoked at least 100 cigarettes in"
-                          " your entire life (approx. 5 packs)?)",
+Smoking = st.sidebar.selectbox("Have you smoked more than 100 cigarettes in"
+                          " your entire life ?)",
                           options=("No", "Yes"))
-alcoholDink = st.sidebar.selectbox("Do you have more than 14 drinks of alcohol (men)"
-                                " or more than 7 (women) in a week?", options=("No", "Yes"))
+alcoholDink = st.sidebar.selectbox("How many drinks of alcohol do you have in a week?", options=("No", "Yes"))
 stroke = st.sidebar.selectbox("Did you have a stroke?", options=("No", "Yes"))
 
 sleepTime = st.sidebar.number_input("Hours of sleep per 24h", 0, 24, 7) 
