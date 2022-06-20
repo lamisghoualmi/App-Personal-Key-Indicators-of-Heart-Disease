@@ -23,7 +23,10 @@ from sklearn.linear_model import LogisticRegression
 st.title('Heart Disease Prediction')
 
 st.write("""
-         ### Do you want to check your heart condition, this app built using machine learning method will help you to diagnose your heart condition!
+         #### You can estimate your chance of getting  heart diseasein seconds!
+      the app is built based on the 2020 annual CDC survey data of 400k  adults related to their health status
+       this app is built using machine learning algorithm called logistic regression with an accuracy of 88% .
+        Learn more about the data here: ([Key Indicators of Heart Disease](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease))
          """)
 
 
@@ -160,15 +163,31 @@ Result=loaded_model.predict(dataToPredic)
 ResultProb= loaded_model.predict_proba(dataToPredic)
 ResultProb1=round(ResultProb[0][1] * 100, 2)
 
+col1, col2, col3 , col4, col5 = st.columns(5)
+
+with col1:
+    pass
+with col2:
+    pass
+with col4:
+    pass
+with col5:
+    pass
+with col3 :
+    # center_button = st.button('Button')
+    if st.button('Predict your chance of getting a heart disease'):
+     # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
+     if (ResultProb1>30):
+      st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
+      st.image("red.png",
+                     caption="You areat risk for getting a heart disease! - Dr. Logistic Regression")
+     else:
+      st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
+      st.image("red.png",
+                     caption="Good news, You are healthy! - Dr. Logistic Regression")
 
 
 
-if st.button('Predict'):
- # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
- if (ResultProb1>30):
-  st.write('You are a person at risk for getting a heart disease, you have a', ResultProb1, '% chance of getting a heart disease' )
- else:
-  st.write('You are healthy, you have a', ResultProb1, '% chance of getting a heart disease' )
 
 
  # array([[ chance of NOT having, chance of having 0.01151576]])
