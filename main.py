@@ -166,18 +166,7 @@ Result=loaded_model.predict(dataToPredic)
 ResultProb= loaded_model.predict_proba(dataToPredic)
 ResultProb1=round(ResultProb[0][1] * 100, 2)
 
-col1, col2, col3 , col4, col5 = st.columns(5)
 
-with col1:
-    pass
-with col2:
-    pass
-with col4:
-    pass
-with col5:
-    pass
-with col3 :
-    # center_button = st.button('Button')
     if st.button('Predict your chance of getting a heart disease'):
      # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
      if (ResultProb1>30):
