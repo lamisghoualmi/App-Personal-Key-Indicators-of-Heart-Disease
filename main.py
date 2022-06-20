@@ -181,12 +181,9 @@ if st.button('PREDICT'):
  # st.write('your prediction:', Result, round(ResultProb[0][1] * 100, 2))
  if (ResultProb1>30):
   st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
-  st.image("red.png",
-             caption="You areat risk for getting a heart disease! - Dr. Logistic Regression")
  else:
   st.write('You have a', ResultProb1, '% chance of getting a heart disease' )
-  st.image("green.png",
-             caption="Good news, You are healthy! - Dr. Logistic Regression")
+  
   
   
   
