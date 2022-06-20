@@ -30,7 +30,7 @@ st.write("""
 
 # st.write(BMIdata)
 # -------------------------------------------------------------------------
-
+st.sidebar.image("heart-care.jpg", use_column_width=True)
 BMI=st.sidebar.selectbox("Select your BMI", ("Normal weight BMI  (18.5-25)", 
                              "Underweight BMI (< 18.5)" ,
                              "Overweight BMI (25-30)",
