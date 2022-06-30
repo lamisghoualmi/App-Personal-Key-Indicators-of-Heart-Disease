@@ -22,7 +22,7 @@ from sklearn.linear_model import LogisticRegression
 st.image("heart-care.jpg", use_column_width=True)
 
 st.write("""
-         ## You can estimate your chance of getting  heart disease in seconds!
+         ## In just a few seconds, you can calculate your risk of developing heart disease!
       the app is built based on the 2020 annual CDC survey data of 400k  adults related to their health status,
         using machine learning algorithm called logistic regression with an accuracy of 88%.
         To learn more about the data, check the following link: [Key Indicators of Heart Disease](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease). 
