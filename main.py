@@ -26,7 +26,7 @@ st.write("""
       the app is built based on the 2020 annual CDC survey data of 400k  adults related to their health status,
         using machine learning algorithm called logistic regression with an accuracy of 88%.
         To learn more about the data, check the following link: [Key Indicators of Heart Disease](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease). 
-        If you are interested to check my code, check my github using the following link: [Github](https://github.com/lamisghoualmi/App-Personal-Key-Indicators-of-Heart-Disease). Note: this results are not equivalent to a medical diagnosis!  
+        If you are interested to check my code, check my github using the following link: [Github](https://lamisghoualmi.github.io/). Note: this results are not equivalent to a medical diagnosis!  
          """)
 st.write("""
          ### To predict your heart disease status:
