@@ -16,7 +16,7 @@ from sklearn.linear_model import LogisticRegression
 
 
 
-# pip list --format=freeze
+# pip list --format=freeze ok
 # streamlit run "C:\Users\Benk\Desktop\PowerBi\Personal Key Indicators of Heart Disease\main.py"
 
 st.image("heart-care.jpg", use_column_width=True)
